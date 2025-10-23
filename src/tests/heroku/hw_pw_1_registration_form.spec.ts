@@ -40,7 +40,7 @@ test("Should successfully registered with valid values", async ({ page }) => {
         const userEmailAddress = page.locator('input[id="email"]');
         const userPhone = page.locator('input[id="phone"]');
         const dropdownCountry = page.locator("#country"); 
-        const userGenderRadio = page.locator("input[name=\'gender\']");
+        const userGenderRadio = page.locator("input[name='gender']");
         const userHobbiesCheckbox = page.locator('input[type="checkbox"][class="hobby"]');
         const language = page.locator("input[id='language']");
         const skillsDropdown = page.locator("#skills");
