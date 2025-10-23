@@ -34,7 +34,7 @@ test.describe("[anatoly-karpovich website] [Registration Form]", () => {
 
 test("Should successfully registered with valid values", async ({ page }) => {
      
-        const userFirstName = page.locator('input[id="firstName"]');
+        const userFirstName = page.locator('#firstName');
         const userLastName = page.locator('input[id="lastName"]');
         const userAddress = page.locator('textarea[id="address"]');
         const userEmailAddress = page.locator('input[id="email"]');
