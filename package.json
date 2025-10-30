@@ -4,22 +4,22 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test:ui": "npx playwright test",
-      "ui-mode": "npx playwright test --ui"
+        "test:ui": "npx playwright test",
+        "ui-mode": "npx playwright test --ui"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/UlyanaGr/AQA_Playwright.git"
+        "type": "git",
+        "url": "git+https://github.com/UlyanaGr/AQA_Playwright.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/UlyanaGr/AQA_Playwright/issues"
+        "url": "https://github.com/UlyanaGr/AQA_Playwright/issues"
     },
     "homepage": "https://github.com/UlyanaGr/AQA_Playwright#readme",
     "devDependencies": {
-      "@playwright/test": "^1.56.0",
-      "@types/node": "^24.7.2"
+        "@playwright/test": "^1.56.1",
+        "@types/node": "^24.7.2"
     }
-  }
+}
