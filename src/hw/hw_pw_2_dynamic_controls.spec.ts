@@ -13,7 +13,7 @@
 //   - Завалидировать текст It's back!
 
 
-import test, { expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 
 test.describe("[heroku App] [Dynamic Controls]", () => {
     test("Find link Get by role", async ({page}) => {

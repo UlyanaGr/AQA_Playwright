@@ -1,6 +1,7 @@
 {
     "name": "git_playwright",
     "version": "1.0.0",
+    "type": "module",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -21,5 +22,11 @@
     "devDependencies": {
         "@playwright/test": "^1.56.1",
         "@types/node": "^24.7.2"
+    },
+    "dependencies": {
+        "@faker-js/faker": "^10.1.0"
+    },
+    "overrides": {
+        "faker": "npm:@faker-js/faker@10.1.0"
     }
 }

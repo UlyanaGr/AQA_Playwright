@@ -15,7 +15,7 @@ import { test, expect } from '@playwright/test';
 import { beforeEach } from "node:test";
 
 // импорт ts файла =>
-import invalidCredentialsData from './data/demo_register_form/credentials_data.data';
+import invalidCredentialsData from '../data/demo_register_form/credentials_data.data.js';
 
 
 test.describe("[Demo Login Form] [Registration with invalid credentials => DDT]", () => {

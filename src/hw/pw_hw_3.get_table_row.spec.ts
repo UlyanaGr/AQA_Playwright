@@ -5,7 +5,7 @@
 
 
 import { test, expect, Page } from "@playwright/test"
-import expectedTable, { ITableRowData } from "./data/table_data/get_table_row.data"
+import expectedTable, { ITableRowData } from "../data/table_data/get_table_row.data.js"
 
 
 async function getTableRow(page: Page, email: string) {
