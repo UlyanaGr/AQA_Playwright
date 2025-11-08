@@ -1,4 +1,4 @@
-import test, { expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 import { beforeEach } from "node:test";
 
 test.describe("[Heroku app] [Table]", () => {

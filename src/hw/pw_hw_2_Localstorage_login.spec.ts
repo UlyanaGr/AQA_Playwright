@@ -7,7 +7,7 @@
 //   Рекоммендации:
 //   - Для доступа к localStorage используйте https://playwright.dev/docs/evaluating
 
-import test, { expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 import { beforeEach } from "node:test";
 
 test.describe("[heroku App] [Login form + LocalStorage]", () => {

@@ -1,15 +1,14 @@
-import test, { expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 import { beforeEach } from "node:test";
 
 // импорт ts файла =>
-// import userData from './data/demo_login_form/register.data';
-
+import userData from "../../../data/demo_login_form/register.data.js";
 
 // импорт json файла =>
-import fs from 'fs';
-import path from 'path';
-const file = path.resolve(`${process.cwd()}/src/tests/heroku/data/demo_login_form/userdata.json`);
-const userData = JSON.parse(fs.readFileSync(file, "utf-8"));
+// import fs from 'fs';
+// import path from 'path';
+// const file = path.resolve(`${process.cwd()}/src/tests/heroku/data/demo_login_form/userdata.json`);
+// const userData = JSON.parse(fs.readFileSync(file, "utf-8"));
 
 test.describe("[Demo Login Form] [Registration]", () => {
   const url = "https://anatoly-karpovich.github.io/demo-login-form/";

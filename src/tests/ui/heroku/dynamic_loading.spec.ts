@@ -1,4 +1,4 @@
-import test, { expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 
 test.describe("[heroku App] [Dynamic Loading]", () => {
   test("Get by text/role", async ({ page }) => {
