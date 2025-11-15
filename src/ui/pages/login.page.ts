@@ -1,6 +1,6 @@
 import { Locator } from "@playwright/test";
 import { SalesPortalPage } from "./salesPortal.page.js";
-import { credentials } from "config/env.js";
+import { credentials, SALES_PORTAL_URL } from "config/env.js";
 
 export class LoginPage extends SalesPortalPage {
   readonly welcomeText = this.page.locator(".welcome-text");
@@ -14,8 +14,11 @@ export class LoginPage extends SalesPortalPage {
   }
 
   async fillCredentials() {
- await this.emailInput.fill(credentials.username);
-await this.passwordInput.fill(credentials.password);
+    await this.emailInput.fill(credentials.username);
+    await this.passwordInput.fill(credentials.password);
+  }
+
+  async open() {
+    await this.page.goto(SALES_PORTAL_URL);
   }
 }
-
