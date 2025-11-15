@@ -4,16 +4,21 @@ import {
     // Page
   } from "@playwright/test";
   import { HomePage } from "ui/pages/home.page.js";
+import { LoginPage } from "ui/pages/login.page.js";
   import { AddNewProductPage } from "ui/pages/products/addNewProduct.page.js";
   import { ProductsListPage } from "ui/pages/products/productsList.page.js";
   
   export interface IPages {
+    loginPage: LoginPage;
     homePage: HomePage;
     productsListPage: ProductsListPage;
     addNewProductPage: AddNewProductPage;
   }
   
   export const test = base.extend<IPages>({
+    loginPage: async ({ page }, use) => {
+      await use(new LoginPage(page));
+    },
     homePage: async ({ page }, use) => {
       await use(new HomePage(page));
     },

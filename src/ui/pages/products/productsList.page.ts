@@ -1,10 +1,18 @@
 import { SalesPortalPage } from "../salesPortal.page.js";
 import { IProductInTable } from "data/types/product.types.js";
 import { MANUFACTURERS } from "data/salesPortal/products/manufacturers.js";
-import { ProductDetailsModal } from "ui/pages/products/details.modal.js";
+import { ProductDetailsModal } from "../products/details.modal.js";
+import { DeleteModal } from "../products/components/delete.modal.js";
+import { Page } from '@playwright/test';
 
-export class ProductsListPage extends SalesPortalPage {
-  readonly detailsModal = new ProductDetailsModal(this.page);
+ export class ProductsListPage extends SalesPortalPage {
+    readonly detailsModal = new ProductDetailsModal(this.page);
+    readonly deleteModal: DeleteModal; 
+
+    constructor(page: Page) {
+        super(page); 
+        this.deleteModal = new DeleteModal(page); 
+    }
 
   readonly productsPageTitle = this.page.locator("h2.fw-bold");
   readonly addNewProductButton = this.page.locator('[name="add-button"]');
@@ -30,6 +38,19 @@ export class ProductsListPage extends SalesPortalPage {
   async clickAddNewProduct() {
     await this.addNewProductButton.click();
   }
+
+  async getFirstRowProductData(): Promise<IProductInTable> {
+    //tableRowByIndex(0) для получения данных из первой строки
+    const data = await this.tableRowByIndex(0).locator("td").allInnerTexts();
+    const [name, price, manufacturer, createdOn] = data;
+
+    return {
+        name: name!,
+        price: +price!.replace("$", ""), 
+        manufacturer: manufacturer! as MANUFACTURERS,
+        createdOn: createdOn!,
+    };
+}
 
   async getProductData(productName: string): Promise<IProductInTable> {
     //Variant 1

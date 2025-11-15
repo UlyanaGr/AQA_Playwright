@@ -52,7 +52,7 @@ test.describe("[e2e test -> Add New Product] [Products]", async () => {
     await expect(actualData.name, "Product name sshould be match").toEqual(productData.name);
     await expect(actualData.price, "Price should be match").toEqual(expectedPriceText);
     await expect(actualData.manufacturer, "Manufacturer should be match").toEqual(productData.manufacturer);
-    await expect(productsListPage.firstRow).toBeVisible();
+    await expect(productsListPage.tableRowByIndex(0)).toBeVisible(); 
 
   });
 });
