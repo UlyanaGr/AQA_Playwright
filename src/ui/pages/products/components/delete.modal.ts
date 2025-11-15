@@ -1,32 +1,31 @@
-import { Locator, Page } from "@playwright/test";
+import { Page } from "@playwright/test";
+import { SalesPortalPage } from "ui/pages/salesPortal.page.js"; 
 
-export class DeleteModal {
-    private readonly modal: Locator;
-    
-    readonly title: Locator;
-    readonly confirmButton: Locator; 
-    readonly cancelButton: Locator;
+
+export class DeleteModal extends SalesPortalPage {
+    readonly uniqueElement = this.page.locator('[role="dialog"]').filter({ hasText: 'Delete Product' });
+
+    readonly title = this.uniqueElement.locator('h5');
+    readonly confirmButton = this.uniqueElement.getByRole('button', { name: 'Yes, Delete' });
+    readonly cancelButton = this.uniqueElement.getByRole('button', { name: 'Cancel' });
     
     constructor(page: Page) {
-        this.modal = page.locator('[role="dialog"]').filter({ hasText: 'Delete Product' });
-        this.title = this.modal.locator('h5');
-        this.confirmButton = this.modal.getByRole('button', { name: 'Yes, Delete' });
-        this.cancelButton = this.modal.getByRole('button', { name: 'Cancel' });
-    }
-
-    async waitForOpened() {
-        await this.modal.waitFor({ state: 'visible' });
-    }
+        super(page);
+   }
+   
+   async waitForOpened() {
+       await this.uniqueElement.waitFor({ state: 'visible' });
+   }
 
    async waitForClosed() {
-        await this.modal.waitFor({ state: 'hidden' });
-    }
+       await this.uniqueElement.waitFor({ state: 'hidden' });
+   }
 
-    async confirmDelete() {
-        await this.confirmButton.click();
-    }
+   async confirmDelete() {
+       await this.confirmButton.click();
+   }
 
-    async clickCancel() {
-        await this.cancelButton.click();
-    }
+   async clickCancel() {
+       await this.cancelButton.click();
+   }
 }
