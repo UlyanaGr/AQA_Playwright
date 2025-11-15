@@ -7,12 +7,7 @@ import { Page } from '@playwright/test';
 
  export class ProductsListPage extends SalesPortalPage {
     readonly detailsModal = new ProductDetailsModal(this.page);
-    readonly deleteModal: DeleteModal; 
-
-    constructor(page: Page) {
-        super(page); 
-        this.deleteModal = new DeleteModal(page); 
-    }
+    readonly deleteModal: DeleteModal = new DeleteModal(this.page)
 
   readonly productsPageTitle = this.page.locator("h2.fw-bold");
   readonly addNewProductButton = this.page.locator('[name="add-button"]');
