@@ -21,7 +21,7 @@ export class DeleteModal extends SalesPortalPage {
        await this.uniqueElement.waitFor({ state: 'hidden' });
    }
 
-   async confirmDelete() {
+   async clickConfirm() { // clickOnConfirmButton
        await this.confirmButton.click();
    }
 
