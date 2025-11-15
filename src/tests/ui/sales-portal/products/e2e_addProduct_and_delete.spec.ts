@@ -62,7 +62,7 @@ test.describe("[Sales Portal] [e2e test --> Add product and delete product]", ()
         
 
     await productsListPage.deleteModal.waitForOpened();
-    await productsListPage.deleteModal.confirmDelete(); // клик на кнопку Yes, Delete
+    await productsListPage.deleteModal.clickConfirm(); // клик на кнопку Yes, Delete
 
     await productsListPage.deleteModal.waitForClosed();
     await productsListPage.waitForOpened();
