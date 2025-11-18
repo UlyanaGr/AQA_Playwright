@@ -1,5 +1,5 @@
 import { APIResponse, expect } from "@playwright/test";
-import { validateJsonSchema } from "./schema.utils.js";
+import { validateJsonSchema } from "utils/schema.utils";
 
 export async function validateResponse(
   response: APIResponse,

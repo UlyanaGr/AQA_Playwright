@@ -1,9 +1,9 @@
-import { test, expect} from "fixtures/pages.fixture.js";
-import { NOTIFICATIONS } from "data/salesPortal/notifications.js";
-import { generateProductData } from "data/salesPortal/products/generateProductData.js";
+import { test, expect} from "fixtures/pages.fixture";
+import { NOTIFICATIONS } from "data/salesPortal/notifications";
+import { generateProductData } from "data/salesPortal/products/generateProductData";
 import _ from "lodash";
-// import { LoginPage } from "ui/pages/login.page.js";
-// import { IProductInTable } from "data/types/product.types.js";
+// import { LoginPage } from "ui/pages/login.page";
+// import { IProductInTable } from "data/types/product.types";
 
 // Создайте e2e тест со следующими шагами:
 // 1. Зайти на сайт Sales Portal

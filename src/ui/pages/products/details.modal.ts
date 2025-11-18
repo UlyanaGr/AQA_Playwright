@@ -1,6 +1,6 @@
-import { IProductDetails } from "data/types/product.types.js";
-import { SalesPortalPage } from "../salesPortal.page.js";
-import { MANUFACTURERS } from "data/salesPortal/products/manufacturers.js";
+import { IProductDetails } from "data/types/product.types";
+import { SalesPortalPage } from "../salesPortal.page";
+import { MANUFACTURERS } from "data/salesPortal/products/manufacturers";
 
 export class ProductDetailsModal extends SalesPortalPage {
   readonly uniqueElement = this.page.locator("#ProductDetailsModal");

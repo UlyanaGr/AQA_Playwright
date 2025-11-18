@@ -1,6 +1,5 @@
 import { expect } from "@playwright/test";
-// import Ajv from "ajv";
-import Ajv = require("ajv");
+import Ajv from "ajv";
 
 export function validateJsonSchema(body: object, schema: object) {
   const ajv = new Ajv();

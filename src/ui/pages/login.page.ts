@@ -1,6 +1,6 @@
 import { Locator } from "@playwright/test";
-import { SalesPortalPage } from "./salesPortal.page.js";
-import { credentials, SALES_PORTAL_URL } from "config/env.js";
+import { SalesPortalPage } from "./salesPortal.page";
+import { credentials, SALES_PORTAL_URL } from "config/env";
 
 export class LoginPage extends SalesPortalPage {
   readonly welcomeText = this.page.locator(".welcome-text");

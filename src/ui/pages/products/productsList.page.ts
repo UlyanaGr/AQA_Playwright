@@ -1,8 +1,8 @@
-import { SalesPortalPage } from "../salesPortal.page.js";
-import { IProductInTable } from "data/types/product.types.js";
-import { MANUFACTURERS } from "data/salesPortal/products/manufacturers.js";
-import { ProductDetailsModal } from "../products/details.modal.js";
-import { DeleteModal } from "../products/components/delete.modal.js";
+import { SalesPortalPage } from "../salesPortal.page";
+import { IProductInTable } from "data/types/product.types";
+import { MANUFACTURERS } from "data/salesPortal/products/manufacturers";
+import { ProductDetailsModal } from "../products/details.modal";
+import { DeleteModal } from "../products/components/delete.modal";
 import { Page } from '@playwright/test';
 
  export class ProductsListPage extends SalesPortalPage {

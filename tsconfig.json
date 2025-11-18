@@ -8,8 +8,13 @@
   
       // Environment Settings
       // See also https://aka.ms/tsconfig/module
-      "module": "nodenext",
-      "target": "esnext",
+      // "module": "nodenext",
+      // "target": "esnext",
+      // ⚠️ ИЗМЕНИТЕ: Отключите строгий режим NodeNext
+      "module": "commonjs", // Или "es2020", "esnext"
+      "target": "esnext", // Или "es2020"
+      // Позволяет использовать синтаксис импорта ES6 для CommonJS модулей (например, для dotenv)
+      "esModuleInterop": true,
     
       // For nodejs:
       // "lib": ["esnext"],

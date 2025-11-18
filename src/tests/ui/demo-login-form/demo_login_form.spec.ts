@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { beforeEach } from "node:test";
 
 // импорт ts файла =>
-import userData from "../../../data/demo_login_form/register.data.js";
+import userData from "../../../data/demo_login_form/register.data";
 
 // импорт json файла =>
 // import fs from 'fs';

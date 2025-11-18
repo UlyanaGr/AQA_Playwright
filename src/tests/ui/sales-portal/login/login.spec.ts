@@ -7,9 +7,9 @@
 
 
 import { test, expect } from '@playwright/test';
-import { LoginPage } from "ui/pages/login.page.js";
-// import { SalesPortalPage } from "ui/pages/salesPortal.page.js";
-// import { HomePage } from "ui/pages/home.page.js";
+import { LoginPage } from "ui/pages/login.page";
+// import { SalesPortalPage } from "ui/pages/salesPortal.page";
+// import { HomePage } from "ui/pages/home.page";
 
 test.describe("[Sign-in Form]", () => {
   

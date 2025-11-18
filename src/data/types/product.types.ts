@@ -1,5 +1,5 @@
-import { MANUFACTURERS } from "data/salesPortal/products/manufacturers.js";
-import { ID, IResponseFields } from "./core.types.js";
+import { MANUFACTURERS } from "data/salesPortal/products/manufacturers";
+import { ID, IResponseFields } from "./core.types";
 
 export interface IProduct {
   name: string;

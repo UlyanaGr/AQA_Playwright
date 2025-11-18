@@ -1,5 +1,5 @@
-import { obligatoryFieldsSchema, obligatoryRequredFields } from "../core.schema.js";
-import { productSchema } from "./product.schema.js";
+import { obligatoryFieldsSchema, obligatoryRequredFields } from "../core.schema";
+import { productSchema } from "./product.schema";
 
 export const createProductSchema = {
   type: "object",
