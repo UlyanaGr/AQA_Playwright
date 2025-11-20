@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
-import { apiConfig } from "config/apiConfig.js";
-import { credentials } from "config/env.js";
-import { generateProductData } from "data/salesPortal/products/generateProductData.js";
-import { createProductSchema } from "data/schemas/products/create.schema.js";
-import { STATUS_CODES } from "data/statusCodes.js";
-import { IProductFromResponse } from "data/types/product.types.js";
-import { validateResponse } from "utils/validateResponse.utils.js";
+import { apiConfig } from "config/apiConfig";
+import { credentials } from "config/env";
+import { generateProductData } from "data/salesPortal/products/generateProductData";
+import { createProductSchema } from "data/schemas/products/create.schema";
+import { STATUS_CODES } from "data/statusCodes";
+import { IProductFromResponse } from "data/types/product.types";
+import { validateResponse } from "utils/validateResponse.utils";
 
 const { baseURL, endpoints } = apiConfig;
 

@@ -1,5 +1,5 @@
 import { Page } from "@playwright/test";
-import { SalesPortalPage } from "ui/pages/salesPortal.page.js"; 
+import { SalesPortalPage } from "ui/pages/salesPortal.page"; 
 
 
 export class DeleteModal extends SalesPortalPage {

@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
-import { credentials } from "config/env.js"; 
-import { NOTIFICATIONS } from "data/salesPortal/notifications.js";
-import { generateProductData } from "data/salesPortal/products/generateProductData.js";
-import { HomePage } from "ui/pages/home.page.js";
-import { AddNewProductPage } from "ui/pages/products/addNewProduct.page.js";
-import { ProductsListPage } from "ui/pages/products/productsList.page.js";
-import { LoginPage } from "ui/pages/login.page.js";
+import { credentials } from "config/env"; 
+import { NOTIFICATIONS } from "data/salesPortal/notifications";
+import { generateProductData } from "data/salesPortal/products/generateProductData";
+import { HomePage } from "ui/pages/home.page";
+import { AddNewProductPage } from "ui/pages/products/addNewProduct.page";
+import { ProductsListPage } from "ui/pages/products/productsList.page";
+import { LoginPage } from "ui/pages/login.page";
 
 // Разработать е2е теста со следующими шагами:
 //  - Открыть Sales Portal локально поднятый в докере

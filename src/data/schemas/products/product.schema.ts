@@ -1,4 +1,4 @@
-import { MANUFACTURERS } from "data/salesPortal/products/manufacturers.js";
+import { MANUFACTURERS } from "data/salesPortal/products/manufacturers";
 
 export const productSchema = {
   type: "object",

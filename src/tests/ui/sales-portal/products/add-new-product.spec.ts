@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
-import { credentials } from "config/env.js"; 
-import { NOTIFICATIONS } from "data/salesPortal/notifications.js";
-import { generateProductData } from "data/salesPortal/products/generateProductData.js";
-// import { MANUFACTURERS } from "data/salesPortal/products/manufacturers.js";
-// import { IProduct } from "data/types/product.types.js";
-import { HomePage } from "ui/pages/home.page.js";
-import { AddNewProductPage } from "ui/pages/products/addNewProduct.page.js";
-import { ProductsListPage } from "ui/pages/products/productsList.page.js";
+import { credentials } from "config/env"; 
+import { NOTIFICATIONS } from "data/salesPortal/notifications";
+import { generateProductData } from "data/salesPortal/products/generateProductData";
+// import { MANUFACTURERS } from "data/salesPortal/products/manufacturers";
+// import { IProduct } from "data/types/product.types";
+import { HomePage } from "ui/pages/home.page";
+import { AddNewProductPage } from "ui/pages/products/addNewProduct.page";
+import { ProductsListPage } from "ui/pages/products/productsList.page";
 
 // const productData: IProduct = {
 //   name: "Product" + Date.now(),
