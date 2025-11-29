@@ -22,3 +22,4 @@ export interface IResponse<T extends object | null> {
 }
 
 export type SortOrder = "asc" | "desc";
+
