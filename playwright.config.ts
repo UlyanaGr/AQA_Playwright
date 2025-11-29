@@ -53,6 +53,19 @@ export default defineConfig({
           },
       },
   },
+//   {
+//     name: 'integration',
+//     testDir: './src/tests/ui/sales-portal',
+//     testMatch: /.*.spec.ts/,
+//     use: {
+//         baseURL: process.env.SALES_PORTAL_API_URL, 
+//         headless: true,
+//         browserName: 'chromium', 
+//         extraHTTPHeaders: {
+//             'Accept': 'application/json',
+//         },
+//     },
+// },
     // {
     //   name: 'chromium',
     //   use: { ...devices["Desktop Chrome"], headless: false },
