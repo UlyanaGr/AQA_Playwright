@@ -110,4 +110,18 @@ export class ProductsListPage extends SalesPortalPage {
   async clickSearch() {
     await this.searchButton.click();
   }
+
+  async getFirstRowProductData(): Promise<IProductInTable> {
+    // Получаем локатор для первого ряда
+    const firstRow = this.tableRowByIndex(0); 
+    
+    // Получаем текст из всех ячеек ряда. Предполагаемый порядок: Name, Price, Manufacturer, CreatedOn
+    const [name, price, manufacturer, createdOn] = await firstRow.locator("td").allInnerTexts();
+    return {
+        name: name!,
+        price: +price!.replace("$", ""), 
+        manufacturer: manufacturer! as MANUFACTURERS, 
+        createdOn: createdOn!,
+    };
+}
 }
