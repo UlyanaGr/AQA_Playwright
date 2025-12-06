@@ -2,6 +2,7 @@ import { test, expect} from "fixtures/pages.fixture";
 import { NOTIFICATIONS } from "data/salesPortal/notifications";
 import { generateProductData } from "data/salesPortal/products/generateProductData";
 import _ from "lodash";
+import { credentials } from "config/env";
 // import { LoginPage } from "ui/pages/login.page";
 // import { IProductInTable } from "data/types/product.types";
 
@@ -28,12 +29,12 @@ test.describe("[Sales Portal] [e2e test --> Add product and delete product]", ()
     //test with fixtures version 1
     test("Product Details", async ({ loginPage, homePage, productsListPage, addNewProductPage }) => {
     //login page
-    await loginPage.open();
-    await expect(loginPage.emailInput).toBeVisible();
-    await loginPage.fillCredentials();
-    await loginPage.clickOnLoginButton();
-    await loginPage.waitForOpened();
-    await expect(loginPage.welcomeText).toBeVisible();
+   await loginPage.open();
+   await expect(loginPage.emailInput).toBeVisible();
+   await loginPage.fillCredentials(credentials);
+   await loginPage.clickLogin();
+   await homePage.waitForOpened();
+    // await expect(loginPage.welcomeText).toBeVisible();
     
     // Home Page
     await homePage.waitForOpened();
