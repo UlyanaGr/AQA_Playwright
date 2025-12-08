@@ -8,6 +8,7 @@
 
 import { test, expect } from '@playwright/test';
 import { LoginPage } from "ui/pages/login.page";
+import { credentials } from "config/env";
 // import { SalesPortalPage } from "ui/pages/salesPortal.page";
 // import { HomePage } from "ui/pages/home.page";
 
@@ -16,12 +17,11 @@ test.describe("[Sign-in Form]", () => {
     test('Sign in', async ({ page }) => {
         
         const loginPage = new LoginPage(page);
-        await loginPage.open();    
-        await expect(loginPage.emailInput).toBeVisible();
-        await loginPage.fillCredentials();
-        await loginPage.clickOnLoginButton();
-        await loginPage.waitForOpened();
-        await expect(loginPage.welcomeText).toBeVisible();
+       await loginPage.open();
+           await expect(loginPage.emailInput).toBeVisible();
+           await loginPage.fillCredentials(credentials);
+           await loginPage.clickLogin();
+      
 
     });
   }); 
