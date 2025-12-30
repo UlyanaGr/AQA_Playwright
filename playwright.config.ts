@@ -27,7 +27,18 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['list', { printSteps: true }],
-    ['html']
+    ['html'],
+    [
+      'allure-playwright',
+      {
+        // outputFolder: 'allure-results', // Добавляет сбор данных для Allure
+        suiteTitle: false,
+        environmentInfo: {
+          UI_URL: process.env.SALES_PORTAL_URL,
+          API_URL: process.env.SALES_PORTAL_API_URL,
+        },
+      },
+    ],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -35,11 +46,29 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: "on",
+    screenshot: "only-on-failure",
+    video: "on-first-retry",
   },
 
   /* Configure projects for major browsers */
   projects: [
+    {
+      name: "setup",
+      use: { ...devices["Desktop Chrome"] },
+      testDir: "src/tests/ui/sales-portal",
+      testMatch: /\.setup\.ts/,
+    },
+    {
+      name: "sales-portal-ui",
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1920, height: 1080 },
+        storageState: "src/.auth/user.json",
+      },
+      dependencies: ["setup"],
+      testDir: "src/tests/ui/sales-portal",
+    },
     {
       name: 'api',
       testDir: './src/tests/api/products',
